@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MotionEx</string>
+    <string name="btn_text_card">Card Example</string>
+    <string name="card_black_title">Black Card</string>
+    <string name="card_purple_title">Purple Card</string>
+</resources>
