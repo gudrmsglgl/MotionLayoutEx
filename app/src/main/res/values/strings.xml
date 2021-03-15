@@ -3,4 +3,5 @@
     <string name="btn_text_card">Card Example</string>
     <string name="card_black_title">Black Card</string>
     <string name="card_purple_title">Purple Card</string>
+    <string name="card_red_title">Red Card</string>
 </resources>
