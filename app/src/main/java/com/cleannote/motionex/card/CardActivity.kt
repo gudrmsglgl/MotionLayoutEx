@@ -21,13 +21,39 @@ class CardActivity : AppCompatActivity() {
         binding.btnRed.setOnClickListener {
             when (binding.rootMotionView.currentState) {
                 R.id.const_spread -> {
-                    makeToast("state_spread")
-                    transitionRedOnTop()
+                    transitionSpreadToCollapse()
                 }
                 R.id.const_red_on_top -> {
                     makeToast("state_red_on_top")
                 }
+                R.id.const_purple_on_top -> {
+                    transitionPurpleToBottom()
+                }
+                R.id.const_black_on_top -> {
+
+                }
                 else -> {}
+            }
+        }
+
+        binding.btnPurple.setOnClickListener {
+            when (binding.rootMotionView.currentState) {
+                R.id.const_spread -> {
+                    transitionSpreadToCollapse()
+                    transitionCollapseTo(endStateId = R.id.const_purple_on_top)
+                }
+                R.id.const_purple_on_top -> {
+                    makeToast("state_purple_on_top")
+                }
+            }
+        }
+
+        binding.btnBlack.setOnClickListener {
+            when (binding.rootMotionView.currentState) {
+                R.id.const_spread -> {
+                    transitionSpreadToCollapse()
+                    transitionCollapseTo(endStateId = R.id.const_black_on_top)
+                }
             }
         }
     }
@@ -36,13 +62,17 @@ class CardActivity : AppCompatActivity() {
         Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
     }
 
-    private fun transitionRedOnTop() = with (binding.rootMotionView) {
-        setTransition(R.id.const_spread, R.id.const_red_on_top)
+    private fun transitionSpreadToCollapse() = with (binding.rootMotionView) {
+        setTransition(R.id.transition_spread_to_collapse)
         transitionToEnd()
     }
 
+    private fun transitionPurpleToBottom() = with (binding.rootMotionView) {
+        setTransition(R.id.transition_purple_to_bottom)
+        transitionToEnd()
+    }
 
-    private fun collapsedCardCompletedListener(@IdRes endStateId: Int) {
+    private fun transitionCollapseTo(@IdRes endStateId: Int) {
         binding.rootMotionView.setTransitionListener(object : TransitionAdapter() {
             override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
                 if (currentId == R.id.const_red_on_top) {
