@@ -3,6 +3,7 @@ package com.cleannote.motionex.custom
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.widget.TextView
 import com.cleannote.motionex.R
@@ -31,6 +32,7 @@ class CreditCardView: MaterialCardView {
     }
 
     private fun initView(){
+        this.radius = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10f, context.resources.displayMetrics)
         val infService = Context.LAYOUT_INFLATER_SERVICE
         val li: LayoutInflater = context.getSystemService(infService) as LayoutInflater
         val view = li.inflate(R.layout.custom_layout_card, this, false)

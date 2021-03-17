@@ -46,7 +46,7 @@
     </Transition>
 
     <Transition
-        android:id="@+id/transition_purple_to_bottom"
+        android:id="@+id/transition_purple_to_red"
         motion:constraintSetStart="@+id/const_purple_on_top"
         motion:constraintSetEnd="@+id/const_red_on_top"
         motion:duration="600"
@@ -54,6 +54,22 @@
         <KeyFrameSet >
             <KeyAttribute
                 motion:motionTarget="@+id/red_card"
+                motion:framePosition="50"
+                android:translationX="100dp"
+                android:translationY="-60dp"
+                android:rotation="45" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/transition_purple_to_black"
+        motion:constraintSetStart="@+id/const_purple_on_top"
+        motion:constraintSetEnd="@+id/const_black_on_top"
+        motion:duration="600"
+        motion:motionInterpolator="easeOut">
+        <KeyFrameSet >
+            <KeyAttribute
+                motion:motionTarget="@+id/black_card"
                 motion:framePosition="50"
                 android:translationX="100dp"
                 android:translationY="-60dp"
@@ -70,6 +86,38 @@
         <KeyFrameSet >
             <KeyAttribute
                 motion:motionTarget="@+id/black_card"
+                motion:framePosition="50"
+                android:translationX="100dp"
+                android:translationY="-60dp"
+                android:rotation="45" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/transition_black_to_red"
+        motion:constraintSetStart="@+id/const_black_on_top"
+        motion:constraintSetEnd="@+id/const_red_on_top"
+        motion:duration="600"
+        motion:motionInterpolator="easeOut">
+        <KeyFrameSet >
+            <KeyAttribute
+                motion:motionTarget="@+id/red_card"
+                motion:framePosition="50"
+                android:translationX="100dp"
+                android:translationY="-60dp"
+                android:rotation="45" />
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        android:id="@+id/transition_black_to_purple"
+        motion:constraintSetStart="@+id/const_black_on_top"
+        motion:constraintSetEnd="@+id/const_purple_on_top"
+        motion:duration="600"
+        motion:motionInterpolator="easeOut">
+        <KeyFrameSet >
+            <KeyAttribute
+                motion:motionTarget="@+id/purple_card"
                 motion:framePosition="50"
                 android:translationX="100dp"
                 android:translationY="-60dp"
@@ -126,20 +174,19 @@
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:elevation="1dp"
-            android:rotation="-9"
+            android:rotation="7"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintVertical_bias="0.3"
             motion:layout_constraintLeft_toLeftOf="parent"
             motion:layout_constraintRight_toRightOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintDimensionRatio="1.6"
-            android:translationX="-10dp" />
+            motion:layout_constraintDimensionRatio="1.6" />
         <Constraint
             android:id="@+id/purple_card"
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:elevation="1dp"
-            android:rotation="7"
+            android:rotation="-9"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintVertical_bias="0.3"
             motion:layout_constraintLeft_toLeftOf="parent"
