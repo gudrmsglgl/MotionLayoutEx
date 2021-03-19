@@ -5,14 +5,25 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.cleannote.motionex.card.CardActivity
+import com.cleannote.motionex.databinding.ActivityMainBinding
+import com.cleannote.motionex.swipe.MotionSwipeActivity
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        findViewById<Button>(R.id.btn_card_exam).setOnClickListener {
+        binding.btnCardExam.setOnClickListener {
             Intent(this, CardActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        binding.btnSwipeExam.setOnClickListener {
+            Intent(this, MotionSwipeActivity::class.java).also {
                 startActivity(it)
             }
         }
