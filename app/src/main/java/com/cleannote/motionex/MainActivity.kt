@@ -7,6 +7,7 @@ import android.widget.Button
 import com.cleannote.motionex.card.CardActivity
 import com.cleannote.motionex.databinding.ActivityMainBinding
 import com.cleannote.motionex.swipe.MotionSwipeActivity
+import com.cleannote.motionex.toggle.MotionToggleActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -24,6 +25,12 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnSwipeExam.setOnClickListener {
             Intent(this, MotionSwipeActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        binding.btnToggleExam.setOnClickListener {
+            Intent(this, MotionToggleActivity::class.java).also {
                 startActivity(it)
             }
         }

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin_card">5dp</dimen>
+    <dimen name="width_btn_main">200dp</dimen>
 </resources>

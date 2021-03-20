@@ -8,7 +8,7 @@
 
    <Button
        android:id="@+id/btn_card_exam"
-       android:layout_width="150dp"
+       android:layout_width="@dimen/width_btn_main"
        android:layout_height="wrap_content"
        android:text="@string/btn_text_card"
        app:layout_constraintTop_toTopOf="parent"
@@ -19,10 +19,20 @@
 
    <Button
        android:id="@+id/btn_swipe_exam"
-       android:layout_width="150dp"
+       android:layout_width="@dimen/width_btn_main"
        android:layout_height="wrap_content"
        android:text="@string/btn_swipe_exam"
        app:layout_constraintTop_toBottomOf="@+id/btn_card_exam"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       />
+
+   <Button
+       android:id="@+id/btn_toggle_exam"
+       android:layout_width="@dimen/width_btn_main"
+       android:layout_height="wrap_content"
+       android:text="@string/btn_toggle_exam"
+       app:layout_constraintTop_toBottomOf="@+id/btn_swipe_exam"
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintRight_toRightOf="parent"
        />
