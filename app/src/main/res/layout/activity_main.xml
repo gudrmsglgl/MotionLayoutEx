@@ -37,4 +37,14 @@
        app:layout_constraintRight_toRightOf="parent"
        />
 
+   <Button
+       android:id="@+id/btn_cover_exam"
+       android:layout_width="@dimen/width_btn_main"
+       android:layout_height="wrap_content"
+       android:text="@string/btn_cover_exam"
+       app:layout_constraintTop_toBottomOf="@+id/btn_toggle_exam"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
