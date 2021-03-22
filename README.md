@@ -15,4 +15,4 @@
 - ConstraintSet rotationX 및 TransitionY를 활용한 입체 효과
 - AnimatedVectorDrawableCompat 이용하여 시각효과 증대
 ### ScreenShot
-- ![ex3_motion_cover](https://user-images.githubusercontent.com/16537977/111975714-41a06600-8b44-11eb-8558-ee6057337a71.gif)
+![ex3_motion_cover](https://user-images.githubusercontent.com/16537977/111975714-41a06600-8b44-11eb-8558-ee6057337a71.gif)
