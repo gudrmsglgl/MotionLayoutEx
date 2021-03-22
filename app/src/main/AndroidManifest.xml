@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MotionEx">
-        <activity android:name=".cover.CoverEx1Activity"></activity>
+        <activity android:name=".cover.CoverEx3Activity"></activity>
+        <activity android:name=".cover.CoverEx2Activity" />
+        <activity android:name=".cover.CoverEx1Activity" />
         <activity android:name=".cover.CoverActivity" />
         <activity android:name=".toggle.MotionToggleActivity" />
         <activity android:name=".swipe.MotionSwipeActivity" />

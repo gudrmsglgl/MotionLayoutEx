@@ -17,4 +17,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <Button
+        android:id="@+id/btn_cover_ex2"
+        android:layout_width="@dimen/width_btn_main"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_cover_ex2"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/crazyPink"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cover_ex1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_cover_ex3"
+        android:layout_width="@dimen/width_btn_main"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_cover_ex3"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/crazyPink"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cover_ex2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

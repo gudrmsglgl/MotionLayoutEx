@@ -5,6 +5,8 @@
     <string name="btn_toggle_exam">Toggle Exam</string>
     <string name="btn_cover_exam">Cover Exam</string>
     <string name="btn_cover_ex1">Cover Exam1</string>
+    <string name="btn_cover_ex2">Cover With text</string>
+    <string name="btn_cover_ex3">Cover With text, flow</string>
     <string name="card_black_title">Black Card</string>
     <string name="card_purple_title">Purple Card</string>
     <string name="card_red_title">Red Card</string>

@@ -20,5 +20,17 @@ class CoverActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        binding.btnCoverEx2.setOnClickListener {
+            Intent(this, CoverEx2Activity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        binding.btnCoverEx3.setOnClickListener {
+            Intent(this, CoverEx3Activity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 }

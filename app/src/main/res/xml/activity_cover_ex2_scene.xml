@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start">
+       <OnSwipe
+           motion:dragDirection="dragDown"
+           motion:touchAnchorId="@id/bookCover"
+           motion:touchRegionId="@id/bookCover"
+           motion:onTouchUp="autoComplete"
+           motion:touchAnchorSide="bottom"/>
+        <KeyFrameSet >
+            <KeyAttribute
+                motion:motionTarget="@+id/bookSynopsisTitle"
+                motion:framePosition="70"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/bookSynopsisText"
+                motion:framePosition="70"
+                android:alpha="0" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/bookSynopsisCard"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:rotationX="-55"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.35"/>
+        <Constraint
+            android:id="@+id/bookSynopsisTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="32dp"
+            android:rotationX="-55"
+            android:alpha="0"
+            motion:layout_constraintTop_toTopOf="@+id/bookSynopsisCard"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/bookSynopsisText"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:rotationX="-55"
+            android:alpha="0"
+            motion:layout_constraintBottom_toBottomOf="@+id/bookSynopsisCard"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/bookSynopsisTitle"
+            />
+        <Constraint
+            android:id="@+id/bookCover"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:rotationX="0"
+            android:translationY="0dp"
+            motion:layout_constraintVertical_bias="0.3"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/bookSynopsisCard"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:rotationX="0"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintVertical_bias="0.3"/>
+        <Constraint
+            android:id="@+id/bookSynopsisTitle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="32dp"
+            android:rotationX="0"
+            android:alpha="1"
+            motion:layout_constraintTop_toTopOf="@+id/bookSynopsisCard"
+            motion:layout_constraintEnd_toEndOf="@+id/bookSynopsisCard" />
+        <Constraint
+            android:id="@+id/bookSynopsisText"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:rotationX="0"
+            android:alpha="1"
+            motion:layout_constraintBottom_toBottomOf="@+id/bookSynopsisCard"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/bookSynopsisTitle"
+            />
+        <Constraint
+            android:id="@+id/bookCover"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:rotationX="-55"
+            android:translationY="-48dp"
+            motion:layout_constraintTop_toBottomOf="@+id/bookSynopsisCard"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent" />
+    </ConstraintSet>
+</MotionScene>
